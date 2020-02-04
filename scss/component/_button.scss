@@ -1,0 +1,76 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: $white;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.default {
+  background-color: map-get($button-colors, btn-default);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(map-get($button-colors, btn-default), 15%);
+  }
+}
+
+.error {
+  background-color: map-get($button-colors, btn-error);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(map-get($button-colors, btn-error), 15%);
+  }
+}
+
+.info {
+  background-color: map-get($button-colors, btn-info);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(map-get($button-colors, btn-info), 15%);
+  }
+}
+
+.success {
+  background-color: map-get($button-colors, btn-success);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(map-get($button-colors, btn-success), 15%);
+  }
+}
+
+.warning {
+  background-color: map-get($button-colors, btn-warning);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(map-get($button-colors, btn-warning), 15%);
+  }
+}
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@include media-query($break-m) {
+  .btn {
+    padding: 10px 30px;
+  }
+
+  .btn + .btn {
+    margin-left: 10px;
+  }
+}
